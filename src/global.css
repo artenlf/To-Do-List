@@ -1,5 +1,6 @@
 :root {
   --black: #000000;
+  --black-shadow: #00000006;
   --blue-300: #4ea8de;
   --blue-700: #1e6f9f;
   --grey-100: #f2f2f2;
@@ -16,7 +17,7 @@
 }
 
 :focus {
-  border: 1px solid var(--purple-600);
+  box-shadow: 0 0 0 1px var(--purple-600);
   outline: transparent;
 }
 
