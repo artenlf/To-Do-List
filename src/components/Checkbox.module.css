@@ -31,12 +31,16 @@
 }
 
 .container:hover input ~ .checkmark {
-  background-color: none;
+  border: 2px solid var(--blue-700);
 }
 
 .container input:checked ~ .checkmark {
   background: var(--purple-600);
   border: none;
+}
+
+.container:hover input:checked ~ .checkmark {
+  background-color: var(--purple-300);
 }
 
 .checkmark:after {
