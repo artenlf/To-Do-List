@@ -1,0 +1,9 @@
+.header {
+  display: flex;
+  justify-content: center;
+  padding: calc(5rem - 4px);
+}
+
+.header img {
+  height: 3rem;
+}
