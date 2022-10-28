@@ -1,0 +1,20 @@
+.button {
+  align-items: center;
+  display: flex;
+  background: var(--blue-700);
+  border-radius: 8px;
+  justify-content: center;
+  color: var(--grey-100);
+  font-size: 0.875rem;
+  font-weight: 700;
+  height: 3.25rem;
+  width: 5.625rem;
+}
+
+.button:hover {
+  background-color: var(--blue-300);
+}
+
+.icon {
+  margin: 0.1rem 0 0 0.5rem;
+}
