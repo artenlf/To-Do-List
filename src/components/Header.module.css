@@ -1,4 +1,5 @@
 .header {
+  background: var(--grey-700);
   display: flex;
   justify-content: center;
   padding: calc(5rem - 4px);

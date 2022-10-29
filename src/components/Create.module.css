@@ -2,12 +2,15 @@
   align-items: center;
   display: flex;
   background: var(--blue-700);
+  border: none;
   border-radius: 8px;
   justify-content: center;
   color: var(--grey-100);
   font-size: 0.875rem;
   font-weight: 700;
   height: 3.25rem;
+  margin-top: -1.6875rem;
+  margin-left: 0.5rem;
   width: 5.625rem;
 }
 
