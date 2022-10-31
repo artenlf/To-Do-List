@@ -19,6 +19,14 @@ export function Panel() {
     setNewTaskText(e.target.value);
   }
 
+  function deleteTask(taskToDelete: string) {
+    const tasksWithoutDeletedOne = tasks.filter((task) => {
+      return task !== taskToDelete;
+    });
+
+    setTasks(tasksWithoutDeletedOne);
+  }
+
   return (
     <>
       <section>
@@ -47,7 +55,7 @@ export function Panel() {
         </header>
         <div className={styles.content}>
           {tasks.map((task) => {
-            return <Task content={task} key={task} />;
+            return <Task content={task} key={task} onDeleteTask={deleteTask} />;
           })}
 
           <img src={Clipboard} alt="clipboard icon" />
