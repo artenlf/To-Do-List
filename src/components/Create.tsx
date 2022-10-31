@@ -4,7 +4,7 @@ import styles from "./Create.module.css";
 export function Create() {
   return (
     <div>
-      <button className={styles.button}>
+      <button type="submit" className={styles.button}>
         Create
         <PlusCircle weight="bold" size={16} className={styles.icon} />
       </button>

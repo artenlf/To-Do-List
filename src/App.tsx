@@ -10,10 +10,7 @@ export function App() {
     <>
       <Header />
       <div className={styles.wrapper}>
-        <div className={styles.wrapper2}>
-          <Input />
-          <Create />
-        </div>
+        <div className={styles.wrapper2}></div>
         <Panel />
       </div>
     </>
