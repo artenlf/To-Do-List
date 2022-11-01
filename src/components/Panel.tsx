@@ -54,13 +54,19 @@ export function Panel() {
           </div>
         </header>
         <div className={styles.content}>
-          {tasks.map((task) => {
-            return <Task content={task} key={task} onDeleteTask={deleteTask} />;
-          })}
-
-          <img src={Clipboard} alt="clipboard icon" />
-          <p>You haven't created any tasks yet</p>
-          <p>Create tasks and organize your to-do items</p>
+          {tasks.length === 0 ? (
+            <>
+              <img src={Clipboard} alt="clipboard icon" />
+              <p>You haven't created any tasks yet</p>
+              <p>Create tasks and organize your to-do items</p>
+            </>
+          ) : (
+            tasks.map((task) => {
+              return (
+                <Task content={task} key={task} onDeleteTask={deleteTask} />
+              );
+            })
+          )}
         </div>
       </section>
     </>
