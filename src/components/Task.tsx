@@ -21,7 +21,7 @@ export function Task({ content, onDeleteTask }: TaskProps) {
           className={styles.delete}
           title="Delete task"
         >
-          <Trash size={24} />
+          <Trash size={24} className={styles.icon} />
         </button>
       </div>
     </div>
