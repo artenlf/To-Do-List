@@ -1,9 +1,13 @@
 import styles from "./Counter.module.css";
 
-export function Counter() {
+interface CounterProps {
+  count: number;
+}
+
+export function Counter({ count }: CounterProps) {
   return (
     <div className={styles.counter}>
-      <p>0</p>
+      <p>{count}</p>
     </div>
   );
 }
