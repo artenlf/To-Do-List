@@ -1,20 +1,23 @@
 import { Trash } from "phosphor-react";
-import { Checkbox } from "./Checkbox";
 import styles from "./Task.module.css";
 
 interface TaskProps {
   content: string;
   onDeleteTask: (task: string) => void;
+  checked?: boolean;
 }
 
-export function Task({ content, onDeleteTask }: TaskProps) {
+export function Task({ content, onDeleteTask, checked }: TaskProps) {
   function handleDeleteTask() {
     onDeleteTask(content);
   }
   return (
     <div>
       <div className={styles.task}>
-        <Checkbox />
+        <label className={styles.container}>
+          <input type="checkbox" checked={checked} />
+          <span className={styles.checkmark} />
+        </label>
         <p>{content}</p>
         <button
           onClick={handleDeleteTask}

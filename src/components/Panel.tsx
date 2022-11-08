@@ -12,6 +12,8 @@ export function Panel() {
   ]);
   const [newTaskText, setNewTaskText] = useState("");
   const [createdTaskCounter, setCreatedTaskCounter] = useState(tasks.length);
+  const [isTaskConcluded, setIsTaskConcluded] = useState(false);
+
   const [concludedTaskCounter, setConcludedTaskCounter] = useState(0);
 
   function handleCreateNewTask(e: FormEvent) {
@@ -42,6 +44,17 @@ export function Panel() {
 
   function handleDeletedTaskCounter() {
     setCreatedTaskCounter((state) => {
+      return state - 1;
+    });
+  }
+
+  function handleAddConcludedTaskCounter() {
+    setConcludedTaskCounter((state) => {
+      return state + 1;
+    });
+  }
+  function handleRemoveConcludedTaskCounter() {
+    setConcludedTaskCounter((state) => {
       return state - 1;
     });
   }

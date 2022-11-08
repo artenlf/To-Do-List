@@ -33,3 +33,70 @@
 .delete:hover {
   color: var(--red-500);
 }
+
+.container {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  padding-left: calc(24px + 0.75rem);
+  margin-bottom: 1.5rem;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  background: none;
+  border: 2px solid var(--blue-300);
+  border-radius: 50%;
+  position: absolute;
+  height: 1.5rem;
+  left: 0;
+  top: 0;
+  width: 1.5rem;
+}
+
+.container:hover input ~ .checkmark {
+  border: 2px solid var(--blue-700);
+}
+
+.container input:checked ~ .checkmark {
+  background: var(--purple-600);
+  border: none;
+}
+
+.container:hover input:checked ~ .checkmark {
+  background-color: var(--purple-300);
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid var(--grey-100);
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
