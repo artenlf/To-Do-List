@@ -25,7 +25,11 @@
   color: var(--grey-300);
   font-size: 0.875rem;
   font-weight: 400;
+  max-width: 40rem;
+  padding-right: 0.75rem;
+  text-align: justify;
   text-decoration: line-through;
+  word-wrap: break-word;
 }
 
 .delete {
