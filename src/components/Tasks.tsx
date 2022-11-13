@@ -1,10 +1,10 @@
-import styles from "./Tasks.module.css";
+import { useState, FormEvent, ChangeEvent } from "react";
 import { v4 as uuidv4, v4 } from "uuid";
+import styles from "./Tasks.module.css";
 import Clipboard from "../../public/clipboard.svg";
 import { Counter } from "./Counter";
 import { Task } from "./Task";
-import { useState, FormEvent, ChangeEvent } from "react";
-import { Create } from "./Create";
+import { PlusCircle } from "phosphor-react";
 
 export function Tasks() {
   const [tasks, setTasks] = useState([
@@ -70,7 +70,10 @@ export function Tasks() {
             onChange={handleTaskTextChange}
             value={newTask}
           />
-          <Create />
+          <button disabled={!newTask ? true : false} type="submit" className={styles.button}>
+        Create
+        <PlusCircle weight="bold" size={16} className={styles.icon} />
+      </button>
         </form>
       </section>
       <section className={styles.panel}>
